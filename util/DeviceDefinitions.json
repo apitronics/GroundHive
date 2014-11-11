@@ -1,0 +1,99 @@
+[
+  {
+    "_id": "FFFFFFFFFFFFFFFFFFFFFFFF00008000",
+    "firmwareUUID": "0x8000",
+    "kind": "DeviceDefinition",
+    "name": "Bee",
+    "sensors": [],
+    "parameters": [
+      {
+        "name": "Sample Rate",
+        "type": "Number",
+        "default": 30,
+        "lowerBound": 1,
+        "upperBound": 60,
+        "units": "seconds",
+        "validators": ["required", "number"]
+      },
+      {
+        "name": "Log Rate",
+        "type": "Number",
+        "default": 15,
+        "lowerBound": 1,
+        "upperBound": 60,
+        "units": "minutes",
+        "validators": ["required", "number"]
+      },
+      {
+        "name": "Sleep",
+        "type": "Radio",
+        "default": "true",
+        "options": [
+          true,
+          false
+        ],
+        "validators": ["required"]
+      }
+    ]
+  },
+  {
+    "_id": "FFFFFFFFFFFFFFFFFFFFFFFF00008001",
+    "firmwareUUID": "0x8001",
+    "kind": "DeviceDefinition",
+    "name": "Motor",
+    "sensors": [],
+    "parameters": [
+      {
+        "name": "Direction",
+        "type": "Radio",
+        "default": "Forward",
+        "options": [
+          "Forward",
+          "Backward"
+        ],
+        "validators": ["required"]
+      },
+      {
+        "name": "Duration",
+        "type": "Number",
+        "default": "15",
+        "lowerBound": 0,
+        "upperBound": 180,
+        "units": "seconds",
+        "validators": ["required", "number"]
+      }
+    ]
+  },
+  {
+    "_id": "FFFFFFFFFFFFFFFFFFFFFFFF00008002",
+    "firmwareUUID": "0x8002",
+    "kind": "DeviceDefinition",
+    "name": "Pressure Bee",
+    "sensors": ["0x19", "0x19", "0x19", "0x20"],
+    "parameters": []
+  },
+  {
+    "_id": "FFFFFFFFFFFFFFFFFFFFFFFF00008003",
+    "firmwareUUID": "0x8003",
+    "kind": "DeviceDefinition",
+    "name": "Temperature Bee",
+    "sensors": ["0x18", "0x18", "0x3"],
+    "parameters": []
+  },
+  {
+    "_id": "FFFFFFFFFFFFFFFFFFFFFFFF00008004",
+    "firmwareUUID": "0x8004",
+    "kind": "DeviceDefinition",
+    "name": "Weather Bee",
+    "sensors": ["0x10", "0x11", "0x12", "0x13", "0x14", "0x15", "0x16"],
+    "parameters": []
+  },
+  {
+    "_id": "FFFFFFFFFFFFFFFFFFFFFFFF00008005",
+    "firmwareUUID": "0x8005",
+    "kind": "DeviceDefinition",
+    "name": "Soil Humidity Bee",
+    "sensors": ["0x17", "0x17", "0x17"],
+    "parameters": []
+  }
+]
